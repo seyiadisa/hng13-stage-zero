@@ -1,0 +1,145 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Helvetica, sans-serif;
+}
+
+main {
+	width: 100%;
+	height: 100dvh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+article {
+	width: 80%;
+	max-width: 1024px;
+	height: fit-content;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2), -1px -1px 5px rgba(0, 0, 0, 0.2);
+	border-radius: 8px;
+	padding-inline: 40px;
+	padding-block: 48px;
+}
+
+header + p {
+	margin-bottom: 0;
+}
+
+article > * {
+	margin-top: 2em;
+}
+
+h1, h2 {
+	text-wrap: wrap;
+	word-break: break-word;
+	overflow-wrap: break-word;
+	hyphens: auto;
+	line-height: 1.5;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+header p {
+	margin: 0;
+}
+
+figure {
+	margin: 0;
+}
+
+img {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.social-links {
+	font-family: 'Courier New', Courier, monospace;
+}
+
+.social-links ul {
+	display: flex;
+	gap: 1.5em;
+}
+
+.social-links a {
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+}
+
+.social-links a::after {
+	content: '';
+	position: absolute;
+	outline: none;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 1.5px;
+	background-color: blue;
+	background-color: currentColor;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.25s ease-out;
+}
+
+.social-links a:hover::after {
+	transform: scaleX(1);
+}
+
+.social-links a:focus-visible {
+	outline: none;
+	text-decoration: none;
+}
+
+.social-links a:focus-visible::after {
+	transform: scaleX(1);
+	background-color: currentColor;
+}
+
+@media (max-width: 992px) {
+ 	article {
+		padding-inline: 32px;
+		padding-block: 40px;
+	}
+
+}
+
+@media (max-width: 767px) {
+	article {
+		width: 95%;			
+		padding-inline: 20px;
+		padding-block: 32px;
+	}
+
+	.social-links ul {
+		display: block;
+	}
+}
