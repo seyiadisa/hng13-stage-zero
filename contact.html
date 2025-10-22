@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Stage Zero</title>
+	<link rel="stylesheet" href="./assets/css/main.css">
+	<link rel="stylesheet" href="./assets/css/contact.css">
+	<link rel="shortcut icon" href="./assets/images/icon.png" type="image/x-icon">
+</head>
+<body>
+	<main>
+		<article>
+			<div id="banner">
+				<h1>Contact Us</h1>
+				<nav>
+					<a href="index.html">Home</a>
+					<a href="about.html">About</a>
+					<a href="contact.html">Contact</a>
+				</nav>
+			</div>
+
+			<form onsubmit="return false;" id="contact-form">
+				<p data-testid="test-contact-success" id="submit-message" aria-hidden="true" aria-live="assertive"></p>
+
+				<div class="form-field">
+					<label for="name">Full Name</label>
+					<input data-testid="test-contact-name" type="text" aria-describedby="error-name" id="name" name="name" required>
+					<span aria-hidden="true" data-testid="test-contact-error-name" id="error-name" class="error hidden"></span>
+				</div>
+				
+				<div class="form-field">
+					<label for="email">Email</label>
+					<input data-testid="test-contact-email" type="email" aria-describedby="error-email" id="email" name="email" required>
+					<span aria-hidden="true" data-testid="test-contact-error-email" id="error-email" class="error hidden"></span>
+				</div>
+				
+				<div class="form-field">
+					<label for="subject">Subject</label>
+					<input data-testid="test-contact-subject" type="text" aria-describedby="error-subject" id="subject" name="subject" required>
+					<span aria-hidden="true" data-testid="test-contact-error-subject" id="error-subject" class="error hidden"></span>
+				</div>
+				
+				<div class="form-field">
+					<label for="message">Message</label>
+					<textarea data-testid="test-contact-message" id="message" aria-describedby="error-message" name="message" minlength="10" required></textarea>
+					<span aria-hidden="true" data-testid="test-contact-error-message" id="error-message" class="error hidden"></span>
+				</div>
+				
+				<button id="submit-btn" disabled aria-disabled="true" data-testid="test-contact-submit" type="submit">Send</button>
+			</form>
+		</article>
+	</main>
+
+	<script src="./assets/js/main.js"></script>
+	<script src="./assets/js/contact.js"></script>
+</body>	
+</html>

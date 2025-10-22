@@ -12,9 +12,3 @@ document.addEventListener('DOMContentLoaded', function() {
 	setInterval(updateTime, 1000);
 	updateTime();
 });
-
-const textTruncate = document.querySelectorAll('.text-truncate');
-textTruncate.forEach(el => {
-	const fullText = el.textContent;
-	el.setAttribute('aria-label', fullText);
-})
