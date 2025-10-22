@@ -3,12 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Stage Zero</title>
+	<title>Stage One</title>
 	<link rel="stylesheet" href="./assets/css/main.css">
 	<link rel="shortcut icon" href="./assets/images/icon.png" type="image/x-icon">
 </head>
 <body>
-	<main>
+	<main data-testid="test-about-page">
 		<article>
 			<div id="banner">
 				<h1>About Me</h1>
@@ -19,9 +19,38 @@
 				</nav>
 			</div>
 
-			<form>
+			<section data-testid="test-about-bio">
+				<h2>Bio</h2>
+				<p>Mechanical engineering graduate transitioning to software engineering.</p>
+			</section>
+			
+			<section data-testid="test-about-goals">
+				<h2>Goals in this program</h2>
+				<ul>
+					<li>Become a finalist</li>
+					<li>Connect with cracked people to build multi-million dollar products</li>
+				</ul>
+			</section>
 
-			</form>
+			<section data-testid="test-about-confidence">
+				<h2>Areas of low confidence</h2>
+				<ul>
+					<li>"My biggest weakness is that I don't know when to stop"</li>
+					<li>Completing tasks on time</li>
+				</ul>
+			</section>
+
+			<section data-testid="test-about-future-note">
+				<h2>Note to future self</h2>
+				<p>Great job completing HNG 13! I'm proud of you. This is just the beginning of much greater things. Remember the man we want to become? I'm working hard to achieve that vision; I hope you are too.</p>
+			</section>
+
+			<section data-testid="test-about-extra">
+				<h2>Extra thoughts</h2>
+				<ul>
+					<li>Can't wait to see what's next!</li>
+				</ul>
+			</section>
 		</article>
 	</main>
 

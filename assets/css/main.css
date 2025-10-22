@@ -50,6 +50,10 @@ article > *:not(:first-child) {
 	margin-top: 1.5em;
 }
 
+p {
+	margin: 0;
+}
+
 ul {
 	margin: 0;
 	padding: 0;
@@ -57,17 +61,6 @@ ul {
 
 li {
 	list-style-type: none;
-}
-
-figure {
-	margin: 0;
-}
-
-img {
-	width: 80px;
-	height: 80px;
-	border-radius: 50%;
-	object-fit: cover;
 }
 
 #banner {

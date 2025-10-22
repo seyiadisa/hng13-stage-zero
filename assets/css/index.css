@@ -1,9 +1,12 @@
-header + p {
-	margin-bottom: 0;
+figure {
+	margin: 0;
 }
 
-header p {
-	margin: 0;
+img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	object-fit: cover;
 }
 
 .social-links ul {
@@ -12,6 +15,11 @@ header p {
 }
 
 @media (max-width: 767px) {
+	img {
+	width: 80px;
+	height: 80px;
+	}
+
 	.social-links ul {
 		display: block;
 	}
