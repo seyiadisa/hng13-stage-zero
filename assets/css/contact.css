@@ -28,10 +28,25 @@ input:focus, textarea:focus {
 .error {
 	color: red;
 	font-size: 0.85em;
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 4px;
 }
 
-.hidden {
-	display: none;
+.error::before {
+	content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'%3E%3Ccircle cx='12' cy='12' r='10' stroke-width='1.5'/%3E%3Cpath stroke-width='1.5' d='M12 8v4.5'/%3E%3Cpath stroke-width='1.8' d='M12 15.988v.01'/%3E%3C/g%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;	
 }
 
 button {
@@ -50,6 +65,29 @@ button:disabled {
 	cursor: not-allowed;
 }
 
-#submit-message {
+.submit-message {
 	color: green;
+	display: flex;
+	position: relative;
+	align-items: center;
+	gap: 4px
+}
+
+.submit-message::before {
+	content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23000' stroke-width='1.5'%3E%3Cpath d='M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12s4.477 10 10 10s10-4.477 10-10Z'/%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m8 12.5l2.5 2.5L16 9'/%3E%3C/g%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+.hidden {
+	display: none;
 }

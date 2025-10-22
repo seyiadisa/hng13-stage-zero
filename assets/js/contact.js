@@ -1,9 +1,10 @@
 const submitBtn = document.getElementById('submit-btn');
 const contactForm = document.querySelector("form")
+const successMsg = document.querySelector('.submit-message');
 
 const isFormValid = () => {
 	const errorElements = contactForm.querySelectorAll('.error .hidden');
-	console.log(errorElements.length)
+
 	return contactForm.checkValidity() && errorElements.length === 0;
 }
 
@@ -13,14 +14,12 @@ const showError = (name, message) => {
 	const errorEl = getErrorEl(name);
 	errorEl.textContent = message;
 	errorEl.classList.remove('hidden');
-	errorEl.ariaHidden = "false";
 }
 
 const hideError = (name) => {
 	const errorEl = getErrorEl(name);
 	errorEl.textContent = "";
 	errorEl.classList.add('hidden');
-	errorEl.ariaHidden = "true";
 }
 
 const validateName = () => {
@@ -71,13 +70,15 @@ contactForm.addEventListener('submit', (e) => {
 	validateEmail();
 	validateSubject();
 	validateMessage();
-
+	
 	if (isFormValid()) {		
-		console.log("Form submitted");
-		const success = document.getElementById('submit-message');
-		success.textContent = "Your message has been sent successfully!";
-		success.style.display = "block";
-		success.ariaHidden = "false";
+		successMsg.textContent = "Your message has been sent successfully!";
+		successMsg.classList.remove('hidden');
+		successMsg.ariaHidden = "false";
+	} else {
+		successMsg.textContent = "";
+		successMsg.classList.add('hidden')
+		successMsg.ariaHidden = "true";
 	}
 })
 
